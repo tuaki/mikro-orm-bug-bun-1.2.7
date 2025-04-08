@@ -1,6 +1,6 @@
 import express from 'express';
-// import { orm } from ':backend/orm';
-// import { User } from ':backend/api/user/user.entity';
+import { orm } from ':backend/orm';
+import { User } from ':backend/api/user.entity';
 
 export const app = express();
 
@@ -16,8 +16,8 @@ const defaultUsers = [ {
 
 app.get('/users', async (req, res, next) => {
     try {
-        // const users = await orm.em.findAll(User);
-        const users = defaultUsers;
+        const users = await orm.em.findAll(User);
+        // const users = defaultUsers;
         res.json(users);
     }
     catch (err) {

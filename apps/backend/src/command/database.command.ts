@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import { env } from ':env';
 import { orm } from ':backend/orm';
-import { seedUser } from ':backend/seed/user.seed';
+import { createUser } from ':backend/api/user.service';
 
 export const databaseCommand = new Command('db');
 databaseCommand
@@ -27,10 +27,6 @@ schemaCommand.command('drop').description('Drop the database schema').action(asy
     console.log('Schema dropped');
 });
 
-async function seedAction() {
-    await seedUser();
-}
-
 databaseCommand.command('seed').description('Seed the database with initial data').action(async () => {
     await seedAction();
     await orm.em.flush();
@@ -55,3 +51,12 @@ databaseCommand.command('fresh-seed').description('drop + migrate + seed').actio
     await orm.close();
     console.log('Flushed');
 });
+
+async function seedAction() {
+    console.log('UserSeed');
+
+    await createUser({
+        email: 'user@example.com',
+        password: 'password',
+    });
+}
