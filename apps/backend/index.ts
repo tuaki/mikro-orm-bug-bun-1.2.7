@@ -1,6 +1,6 @@
 import express from 'express';
-// import { orm } from ':backend/orm';
-// import { User } from ':backend/api/user/user.entity';
+import { orm } from ':backend/orm';
+import { User } from ':backend/api/user.entity';
 
 export const app = express();
 

@@ -28,6 +28,7 @@
         "@mikro-orm/migrations": "^6.4.9",
         "@mikro-orm/postgresql": "^6.4.9",
         "@mikro-orm/reflection": "^6.4.9",
+        "@t3-oss/env-core": "^0.11.0",
         "bcrypt": "^5.1.1",
         "commander": "^12.1.0",
         "express": "^4.19.2",
@@ -35,12 +36,6 @@
       },
       "devDependencies": {
         "ajv": "^8.17.1",
-      },
-    },
-    "packages/env": {
-      "name": "@flowlance/env",
-      "dependencies": {
-        "@t3-oss/env-core": "^0.11.0",
       },
     },
   },
@@ -54,8 +49,6 @@
     "@eslint/js": ["@eslint/js@8.57.1", "", {}, "sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q=="],
 
     "@flowlance/backend": ["@flowlance/backend@workspace:apps/backend"],
-
-    "@flowlance/env": ["@flowlance/env@workspace:packages/env"],
 
     "@humanwhocodes/config-array": ["@humanwhocodes/config-array@0.13.0", "", { "dependencies": { "@humanwhocodes/object-schema": "^2.0.3", "debug": "^4.3.1", "minimatch": "^3.0.5" } }, "sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw=="],
 
