@@ -16,8 +16,8 @@ const defaultUsers = [ {
 
 app.get('/users', async (req, res, next) => {
     try {
-        // const users = await orm.em.findAll(User);
-        const users = defaultUsers;
+        const users = await orm.em.findAll(User);
+        // const users = defaultUsers;
         res.json(users);
     }
     catch (err) {
