@@ -3,10 +3,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "bun run --watch src/index.ts",
-        "types": "bun tsc --build --verbose",
-        "cli": "bun run src/cli.ts",
-        "mikro-orm": "bunx --bun mikro-orm"
+        "mikro-orm": "bunx --bun mikro-orm",
+        "testorm": "bun src/testorm.ts"
     },
     "mikro-orm": {
         "configPaths": [
