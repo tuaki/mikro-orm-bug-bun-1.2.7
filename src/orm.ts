@@ -1,6 +1,6 @@
 import { MikroORM, PostgreSqlDriver, defineConfig, type EntityName } from '@mikro-orm/postgresql';
 import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
-import { env } from ':backend/env';
+import { env } from './env';
 import type { EntityManager } from '@mikro-orm/core';
 import { TSMigrationGenerator } from '@mikro-orm/migrations';
 

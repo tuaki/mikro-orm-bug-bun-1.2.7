@@ -1,6 +1,6 @@
 import express from 'express';
-import { orm } from ':backend/orm';
-import { User } from ':backend/api/user.entity';
+import { orm } from './orm';
+import { User } from './api/user.entity';
 
 export const app = express();
 
@@ -29,4 +29,4 @@ const port = 3400;
 
 app.listen(port);
 
-console.log(`backend listening on port ${port}`);
+console.log(`Test server listening on port ${port}`);

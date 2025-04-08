@@ -1,9 +1,44 @@
 {
-    "extends": "./tsconfig.options.json",
-    "files": [],
-    "references": [
-        {
-            "path": "./apps/backend",
-        },
+    "compilerOptions": {
+        /* Monorepo setup */
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "incremental": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+
+        "outDir": "./dist",
+        "emitDeclarationOnly": true,
+
+        /* ESM */
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleDetection": "force",
+
+        /* Linting */
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        // "noUnusedLocals": true,
+        // "noUnusedParameters": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "verbatimModuleSyntax": true,
+        "experimentalDecorators": true,
+
+        /* Features */
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+
+        "baseUrl": ".",
+    },
+    "include": [
+        "src",
     ],
 }

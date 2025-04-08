@@ -1,5 +1,4 @@
-import ':backend/lib/sentry/instrument';
-import { orm } from ':backend/orm';
+import { orm } from './orm';
 import { program, type Command } from 'commander';
 import { databaseCommand } from './database.command';
 

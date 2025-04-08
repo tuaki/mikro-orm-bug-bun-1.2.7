@@ -7,12 +7,8 @@ node_modules
 .pnp.js
 .npmrc
 
-# We use bun so these files shouldn't even exist. But if they do (e.g., because eslint runs on node by default), we don't want them commited.
-package-lock.json
-
 # cache
 temp/
-.eslintcache
 
 # production
 dist
