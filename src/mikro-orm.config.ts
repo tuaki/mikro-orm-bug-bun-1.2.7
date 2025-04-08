@@ -12,9 +12,11 @@ export default defineConfig({
     password: 'mikrobun',
     dbName: 'mikrobun',
     host: 'postgres',
+    connect: false,
 
     // TODO Just for the tests.
     metadataCache: {
         enabled: false,
-    }
+    },
+    debug: true,
 });
