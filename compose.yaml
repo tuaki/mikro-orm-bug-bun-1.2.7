@@ -1,0 +1,53 @@
+services:
+    bun:
+        container_name: "test-bun"
+        build:
+            # Sets source directory for all COPY, ADD, etc. commands in the Dockerfile
+            context: .
+            # Path to the dockerfile
+            dockerfile: docker/bun/Dockerfile
+        restart: always
+        ports:
+            - "3400:3400"
+        volumes:
+            - .:/app
+        # depends_on:
+        #     - postgres
+
+    # postgres:
+    #     container_name: "test-postgres"
+    #     restart: always
+    #     build:
+    #         context: docker/postgres
+    #     environment:
+    #         - POSTGRES_USER=${DATABASE_USER}
+    #         - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    #         - POSTGRES_DB=${DATABASE_NAME}
+    #     expose:
+    #         - "5432"
+    #     healthcheck:
+    #         test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+    #         interval: 2s
+    #         timeout: 5s
+    #         retries: 10
+
+    # adminer:
+    #     container_name: "test-adminer"
+    #     restart: always
+    #     image: michalhosna/adminer
+    #     ports:
+    #         - 3401:8080
+    #     environment:
+    #         ADMINER_DB: ${DATABASE_NAME}
+    #         ADMINER_DRIVER: pgsql
+    #         ADMINER_PASSWORD: ${DATABASE_PASSWORD}
+    #         ADMINER_SERVER: postgres
+    #         ADMINER_USERNAME: ${DATABASE_USER}
+    #         ADMINER_AUTOLOGIN: 1
+    #         ADMINER_NAME: "flowlance.dev | adminer"
+    #     depends_on:
+    #         - postgres
+
+networks:
+    default:
+        name: test-network

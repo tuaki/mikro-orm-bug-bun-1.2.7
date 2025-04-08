@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        /* Monorepo setup */
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "incremental": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+
+        /* ESM */
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleDetection": "force",
+
+        /* Linting */
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        // "noUnusedLocals": true,
+        // "noUnusedParameters": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "verbatimModuleSyntax": true,
+        "experimentalDecorators": true,
+    }
+}

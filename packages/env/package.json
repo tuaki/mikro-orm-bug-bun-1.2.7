@@ -1,0 +1,8 @@
+{
+    "name": "@flowlance/env",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "@t3-oss/env-core": "^0.11.0"
+    }
+}
