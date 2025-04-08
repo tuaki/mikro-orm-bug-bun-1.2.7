@@ -1,0 +1,15 @@
+diff --git a/utils/Utils.js b/utils/Utils.js
+index 46f568d6f8c920b77dc595c3d3dc8ddf56495aad..d8534738cea46fb2e24091292e1dadf5757d2f45 100644
+--- a/utils/Utils.js
++++ b/utils/Utils.js
+@@ -664,7 +664,10 @@ class Utils {
+         // but those are also present in node, so we need to check this only if they weren't found.
+         if (line === -1) {
+             // here we handle bun which stack is different from nodejs so we search for reflect-metadata
++            console.log('MIKRO-ORM UTILS: stack:', stack);
+             const reflectLine = stack.findIndex(line => Utils.normalizePath(line).includes('node_modules/reflect-metadata/Reflect.js'));
++            console.log('MIKRO-ORM UTILS: reflectLine:', reflectLine);
++            console.log('MIKRO-ORM UTILS: next line MUST include bun:wrap and it:', stack[reflectLine + 1].includes('bun:wrap') ? 'does (yeeeyy)' : 'DOESNT (something bad happened)');
+             if (reflectLine === -1 || reflectLine + 2 >= stack.length || !stack[reflectLine + 1].includes('bun:wrap')) {
+                 return name;
+             }

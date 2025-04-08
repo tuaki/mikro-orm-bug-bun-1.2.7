@@ -17,6 +17,9 @@
       },
     },
   },
+  "patchedDependencies": {
+    "@mikro-orm/core@6.4.12": "patches/@mikro-orm%2Fcore@6.4.12.patch",
+  },
   "packages": {
     "@jercle/yargonaut": ["@jercle/yargonaut@1.1.5", "", { "dependencies": { "chalk": "^4.1.2", "figlet": "^1.5.2", "parent-require": "^1.0.0" } }, "sha512-zBp2myVvBHp1UaJsNTyS6q4UDKT7eRiqTS4oNTS6VQMd6mpxYOdbeK4pY279cDCdakGy6hG0J3ejoXZVsPwHqw=="],
 
