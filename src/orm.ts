@@ -19,7 +19,11 @@ const config = defineConfig({
         generator: TSMigrationGenerator,
         snapshot: false,
     },
-    // debug: true,
+
+    // TODO Just for the tests.
+    metadataCache: {
+        enabled: false,
+    }
 });
 
 export const orm = await MikroORM.init(config);

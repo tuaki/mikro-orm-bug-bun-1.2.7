@@ -6,6 +6,11 @@ import { User } from './api/user.entity';
 export const databaseCommand = new Command('db');
 databaseCommand.description('Database commands');
 
+databaseCommand.command('test').description('Test connection').action(async () => {
+    await orm.close();
+    console.log('\n\nConnection closed');
+});
+
 databaseCommand.command('fresh-seed').description('drop + migrate + seed').action(async () => {
     console.log('Dropping schema...');
     await orm.schema.dropSchema({ dropMigrationsTable: true });
