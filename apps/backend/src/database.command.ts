@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { env } from ':env';
+import { env } from ':backend/env';
 import { orm } from ':backend/orm';
 import { createUser } from ':backend/api/user.service';
 

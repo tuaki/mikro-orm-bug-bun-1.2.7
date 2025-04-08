@@ -17,20 +17,10 @@
         "baseUrl": ".",
         "paths": {
             ":backend/*": [ "./src/*" ],
-            ":static/*": [ "../../packages/static/*" ],
-            ":env": [ "../../packages/env/env.ts" ],
         },
     },
     "include": [
         "src",
-        "tests",
         "index.ts",
-        // See https://github.com/TypeStrong/ts-loader/issues/905 (it's marked as closed but it's still an issue).
-        "./src/**/*.json",
-    ],
-    "references": [
-        {
-            "path": "../../packages/env",
-        },
     ],
 }
